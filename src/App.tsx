@@ -1,6 +1,9 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import {Projects} from './pages/Projects'
+import fireGif from './assets/fire.gif'
+import resume from './assets/resumeNew.pdf'
+
 
 function App() {
   return (
@@ -16,10 +19,10 @@ function App() {
 function HomePage() {
   return (
     <div>
-      <img src='src/assets/fire.gif'/>
+      <img src={fireGif}/>
       <h1>shmethan.com</h1>
       <h3>ethan shanbaum's website</h3>
-      <a href='resumeNew.pdf' target="_blank">resume</a>
+      <a href={resume} target="_blank">resume</a>
       <br />
       <br />
       <Link to="/projects">projects</Link>
