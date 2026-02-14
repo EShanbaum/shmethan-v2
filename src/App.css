@@ -19,3 +19,35 @@ img {
   height: auto;
   width: clamp(100px, 50vw, 400px);
 }
+
+.project {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+.project-image {
+  flex: 0 0 35%;
+}
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.project-content {
+  flex: 1 1 65%;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-content {
+    text-align: center;
+  }
+  .project-image {
+    width: 80%;
+    flex: none;
+  }
+}

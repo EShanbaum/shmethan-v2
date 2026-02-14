@@ -5,7 +5,7 @@ import fireGif from './assets/fire.gif'
 import resume from './assets/resumeNew.pdf'
 
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -16,7 +16,7 @@ function App() {
   )
 }
 
-function HomePage() {
+export const HomePage = () => {
   return (
     <div>
       <img src={fireGif}/>
@@ -28,6 +28,6 @@ function HomePage() {
       <Link to="/projects">projects</Link>
     </div>
   )
-}
+};
 
-export default App
+export default App;
