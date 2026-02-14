@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import {Projects} from './pages/Projects'
 import fireGif from './assets/fire.gif'
 import resume from './assets/resumeNew.pdf'
-
+import linkedIn from './assets/LI-In-Bug.png'
+import gitHub from './assets/GitHub_Invertocat_White.png'
 
 const App = () => {
   return (
@@ -26,6 +27,16 @@ export const HomePage = () => {
       <br />
       <br />
       <Link to="/projects">projects</Link>
+      <br />
+      <br />
+      <span>
+        <a href="https://www.linkedin.com/in/ethan-shanbaum/">
+          <img style={{width: "48px", marginRight: "12px"}} src={linkedIn} />
+        </a>
+        <a href="https://github.com/EShanbaum">
+          <img style={{width: "48px", marginLeft: "12px"}} src={gitHub} />
+        </a>
+      </span>
     </div>
   )
 };
