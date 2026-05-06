@@ -29,13 +29,17 @@ export const IndividualProject = ({ title, tags, description, imgPath, link }: I
             </div>
             <div className="project-content">
                 {link ? (
-                    <a href={link} target='_blank'>
+                    <a href={link} target='_blank' className="project-title-link">
                         <h2>{title}</h2>
                     </a>
                 ) : (
                     <h2>{title}</h2>
                 )}
-                <h5>{tags}</h5>
+                <div className="project-tags">
+                    {tags.split(', ').map(tag => (
+                        <span key={tag} className="project-tag">{tag}</span>
+                    ))}
+                </div>
                 <p>{description}</p>
             </div>
         </div>
@@ -44,8 +48,11 @@ export const IndividualProject = ({ title, tags, description, imgPath, link }: I
 
 export const Projects = () => {
     return (
-        <div>
-            <Link to="/">← back</Link>
+        <div className="projects-page">
+            <header className="projects-header">
+                <Link to="/" className="back-link">← back</Link>
+                <h1 className="projects-heading">Projects</h1>
+            </header>
             <IndividualProject
                 title='Minefolio'
                 tags='2025-Present, Mosaiq Work'
@@ -53,7 +60,6 @@ export const Projects = () => {
                 imgPath={minefolio}
                 link='https://minefol.io/'
             />
-            <hr />
             <IndividualProject
                 title='Plataforma Comunitaria Website'
                 tags='2025-2026, Global Labs Work'
@@ -61,7 +67,6 @@ export const Projects = () => {
                 imgPath={plataforma}
                 link='https://wp.wpi.edu/plataforma-comunitaria/'
             />
-            <hr />
             <IndividualProject
                 title='LAAP: Log Anomaly Analytics Platform'
                 tags='2025, Research Project'
@@ -69,14 +74,12 @@ export const Projects = () => {
                 imgPath={laap}
                 link='https://laapdemo.vercel.app/sequence-tree'
             />
-            <hr />
             <IndividualProject
                 title="Brigham and Women's Hospital App"
                 tags='2025, School Project'
                 description="Developed a PERN web app in Software Engineering class in partnership with Brigham and Women's Hospital to manage service requests and routing throughout the hospital. Led the back-end development of Postgres database and PRISMA schema for service requests and online forum. Managed AWS deployment and performance."
                 imgPath={softEng}
             />
-            <hr />
             <IndividualProject
                 title='Te Papa AI Recommendations'
                 tags='2024-2025, School Project'
@@ -84,15 +87,13 @@ export const Projects = () => {
                 imgPath={tePapa}
                 link='https://digital.wpi.edu/concern/student_works/h989r7879?locale=en'
             />
-            <hr />
-            <IndividualProject 
+            <IndividualProject
                 title='Cellular Automata Simulator'
                 tags='2024, Personal Project'
                 description='Developed online tool for creating cellular automata simulations in SvelteKit. Added custom states and rulesets, as well as simulation controls. Implemented import and export buttons to save simulations.'
                 imgPath={cellAuto}
                 link='https://www.cellularautomata.online/'
             />
-            <hr />
             <IndividualProject
                 title="Bay Path Website Redesign"
                 tags="2021-2022, School Project"
@@ -100,7 +101,9 @@ export const Projects = () => {
                 imgPath={bpImg}
                 link='http://baypath.net/web/athletics/index'
             />
-            <Link to="/">← back</Link>
+            <div className="projects-footer">
+                <Link to="/" className="back-link">← back</Link>
+            </div>
         </div>
     )
 }

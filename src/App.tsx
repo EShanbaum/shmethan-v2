@@ -19,24 +19,22 @@ const App = () => {
 
 export const HomePage = () => {
   return (
-    <div>
-      <img src={fireGif}/>
+    <div className="hero">
+      <img src={fireGif} className="hero-gif" />
       <h1>shmethan.com</h1>
       <h3>ethan shanbaum's website</h3>
-      <a href={resume} target="_blank">resume</a>
-      <br />
-      <br />
-      <Link to="/projects">projects</Link>
-      <br />
-      <br />
-      <span>
-        <a href="https://www.linkedin.com/in/ethan-shanbaum/">
-          <img style={{width: "48px", marginRight: "12px"}} src={linkedIn} />
+      <nav className="home-links">
+        <a href={resume} target="_blank" className="home-link">resume</a>
+        <Link to="/projects" className="home-link">projects</Link>
+      </nav>
+      <div className="social-icons">
+        <a href="https://www.linkedin.com/in/ethan-shanbaum/" target="_blank" aria-label="LinkedIn">
+          <img src={linkedIn} alt="LinkedIn" />
         </a>
-        <a href="https://github.com/EShanbaum">
-          <img style={{width: "48px", marginLeft: "12px"}} src={gitHub} />
+        <a href="https://github.com/EShanbaum" target="_blank" aria-label="GitHub">
+          <img src={gitHub} alt="GitHub" />
         </a>
-      </span>
+      </div>
     </div>
   )
 };
