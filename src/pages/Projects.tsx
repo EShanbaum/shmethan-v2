@@ -5,6 +5,8 @@ import softEng from '../assets/soft_eng.png'
 import laap from '../assets/laap.png'
 import plataforma from '../assets/plataforma.png'
 import minefolio from '../assets/minefolio.png'
+import syros from "../assets/syros.png"
+import revisit from "../assets/revisit.png"
 import {  Link } from 'react-router-dom'
 
 type IndividualProjectProps = {
@@ -53,6 +55,19 @@ export const Projects = () => {
                 <Link to="/" className="back-link">← back</Link>
                 <h1 className="projects-heading">Projects</h1>
             </header>
+            <IndividualProject
+                title='Audio Context Integration into ReVISit'
+                tags='2025-2026, Capstone Project'
+                description='Integrated audio capture technology into the ReVISit study creation platform to aid data analysts wanting additional context for answers. Utilized LLM to transcribe and summarize responses. Conducted 35-person user study and wrote results in report.'
+                imgPath={revisit}
+            />
+            <IndividualProject
+                title='Syros Project Center Website'
+                tags='2026, Global Labs Work'
+                description='Created project center website for Syros, Greece. Incorporated responsive design based on other project center websites.'
+                imgPath={syros}
+                link='https://wp.wpi.edu/syros/'
+            />
             <IndividualProject
                 title='Minefolio'
                 tags='2025-Present, Mosaiq Work'
