@@ -7,6 +7,7 @@ import plataforma from '../assets/plataforma.png'
 import minefolio from '../assets/minefolio.png'
 import syros from "../assets/syros.png"
 import revisit from "../assets/revisit.png"
+import seri from "../assets/seri.png"
 import {  Link } from 'react-router-dom'
 
 type IndividualProjectProps = {
@@ -60,6 +61,13 @@ export const Projects = () => {
                 tags='2025-2026, Capstone Project'
                 description='Integrated audio capture technology into the ReVISit study creation platform to aid data analysts wanting additional context for answers. Utilized LLM to transcribe and summarize responses. Conducted 35-person user study and wrote results in report.'
                 imgPath={revisit}
+            />
+            <IndividualProject
+                title='Nuclear Waste Community Guide'
+                tags='2026, Global Labs Work'
+                description='Took notes form Prof. Seth Tuler of the Social and Environmental Research Institute and converted to responsive pages discussing nuclear waste facilities. Implemented custom menu code and styling.'
+                imgPath={seri}
+                link='https://www.seri-us.org/community-guide/home'
             />
             <IndividualProject
                 title='Syros Project Center Website'
